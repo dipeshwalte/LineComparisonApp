@@ -41,6 +41,18 @@ namespace LineComparisonApp
             else
                 Console.WriteLine("Lines are not equal");
         }
+
+        public void compareTo(Line l1)
+        {
+            double l1Length = l1.CalculateLength();
+            double thisLineLength = this.CalculateLength();
+            if (l1Length == thisLineLength)
+                Console.WriteLine("Lines are equal");
+            else if (l1Length > thisLineLength)
+                Console.WriteLine("This line is smaller than Second Line");
+            else
+                Console.WriteLine("This line is greater than Second Line");
+        }
     }
     class Program
     {
@@ -60,6 +72,13 @@ namespace LineComparisonApp
 
             Console.WriteLine("Length of line l1: " + l1.CalculateLength());
             l.Compare(l1);
+
+            Point a2 = new Point(3, 2);
+            Point b2 = new Point(3, 6);
+            Line l2 = new Line(a2, b2);
+
+            Console.WriteLine("Length of line l2: " + l2.CalculateLength());
+            l.compareTo(l2);
 
         }
     }
