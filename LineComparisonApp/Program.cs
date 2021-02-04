@@ -74,7 +74,7 @@ namespace LineComparisonApp
             l.Compare(l1);
 
             Point a2 = new Point(3, 2);
-            Point b2 = new Point(3, 6);
+            Point b2 = new Point(3, 7);
             Line l2 = new Line(a2, b2);
 
             Console.WriteLine("Length of line l2: " + l2.CalculateLength());
